@@ -6,10 +6,7 @@ using MonoTouch.UIKit;
 using MonoTouch.CoreGraphics;
 
 namespace libGoogleAdMobAds
-{
-	//Comando de btouch
-	// bash /Developer/MonoTouch/usr/bin/btouch libGoogleAdMobAds.cs -s:enums.cs
-	
+{	
 	//@interface GADBannerView : UIView
 	[BaseType (typeof (UIView))]
 	interface GADBannerView
