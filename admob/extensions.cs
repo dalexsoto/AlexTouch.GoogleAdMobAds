@@ -2,8 +2,6 @@ using System;
 using MonoTouch.Foundation;
 using System.Drawing;
 
-namespace libGoogleAdMobAds
-{
 	partial class GADBannerView
 	{
 		// iPhone and iPod Touch ad size.
@@ -24,5 +22,5 @@ namespace libGoogleAdMobAds
 	{
 		public static readonly string GAD_SIMULATOR_ID = "Simulator";
 	}
-}
+
 

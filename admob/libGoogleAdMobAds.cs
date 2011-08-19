@@ -6,7 +6,10 @@ using MonoTouch.UIKit;
 using MonoTouch.CoreGraphics;
 
 namespace libGoogleAdMobAds
-{	
+{
+	//Comando de btouch
+	// bash /Developer/MonoTouch/usr/bin/btouch libGoogleAdMobAds.cs -s:enums.cs
+	
 	//@interface GADBannerView : UIView
 	[BaseType (typeof (UIView))]
 	interface GADBannerView
@@ -48,9 +51,9 @@ namespace libGoogleAdMobAds
 		[Export ("adViewDidReceiveAd:")]
 		void AdViewDidReceiveAd(GADBannerView view);
 		
-//		//- (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error;
-//		[Export ("adView:didFailToReceiveAdWithError:")]
-//		void AdView(GADBannerView view, GADRequestError error);
+		//- (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error;
+		[Export ("adView:didFailToReceiveAdWithError:")]
+		void AdView(GADBannerView view, GADRequestError error);
 		
 		//- (void)adViewWillPresentScreen:(GADBannerView *)adView;
 		[Export ("adViewWillPresentScreen:")]
@@ -111,9 +114,9 @@ namespace libGoogleAdMobAds
 		[Export ("interstitialDidReceiveAd:")]
 		void interstitialDidReceiveAd(GADInterstitial ad);
 		
-//		//- (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error;
-//		[Export ("interstitial:didFailToReceiveAdWithError:")]
-//		void Interstitial(GADInterstitial ad, GADRequestError error);
+		//- (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error;
+		[Export ("interstitial:didFailToReceiveAdWithError:")]
+		void Interstitial(GADInterstitial ad, GADRequestError error);
 		
 		//- (void)interstitialWillPresentScreen:(GADInterstitial *)ad;
 		[Export ("interstitialWillPresentScreen:")]
@@ -186,52 +189,11 @@ namespace libGoogleAdMobAds
 		bool Testing {  [Bind ("isTesting")] get; set; }
 	}
 	
-//	[Static]
-//	[BaseType (typeof (NSError))]
-//	interface GADRequestError 
-//	{
-//	    [Field ("kGADErrorDomain")]
-//	    NSString kGADErrorDomain { get; set; }
-//	}
-	
-	
-//	this is the only missing stuff not bound 
-//
-//
-//#import <Foundation/Foundation.h>
-//
-//@class GADRequest;
-//
-//extern NSString *kGADErrorDomain;
-//
-//// NSError codes for GAD error domain.
-//typedef enum {
-//  // The ad request is invalid.  The localizedFailureReason error description
-//  // will have more details.  Typically this is because the ad did not have the
-//  // ad unit ID or root view controller set.
-//  kGADErrorInvalidRequest,
-//
-//  // The ad request was successful, but no ad was returned.
-//  kGADErrorNoFill,
-//
-//  // There was an error loading data from the network.
-//  kGADErrorNetworkError,
-//
-//  // The ad server experienced a failure processing the request.
-//  kGADErrorServerError,
-//
-//  // The current device's OS is below the minimum required version.
-//  kGADErrorOSVersionTooLow,
-//
-//  // The request was unable to be loaded before being timed out.
-//  kGADErrorTimeout,
-//
-//} GADErrorCode;
-//
-//// This class represents the error generated due to invalid request parameters.
-//@interface GADRequestError : NSError
-//
-//@end
+	[BaseType (typeof (NSError))]
+	interface GADRequestError 
+	{
+	    
+	}
 	
 }
 
