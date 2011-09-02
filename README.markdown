@@ -11,6 +11,6 @@ set its build action to NOTHING
 
 and add this to your additional btouch arguments
 
--v -v -v -gcc_flags "-framework AudioToolbox -L${ProjectDir} -lGoogleAdMobAds -force_load ${ProjectDir}/libGoogleAdMobAds.a"
+-v -v -v -gcc_flags "-framework AudioToolbox -framework MessageUI -framework SystemConfiguration -L${ProjectDir} -lGoogleAdMobAds -force_load ${ProjectDir}/libGoogleAdMobAds.a"
 
 
