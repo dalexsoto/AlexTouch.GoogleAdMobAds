@@ -1,16 +1,47 @@
-MonoTouch AdMob Bindings
+AlexTouch.GoogleAdMobAds
 ========================
 
-Here is the required files to use btouch, just use the following command 
-in shell in order to generate the dll
+This is a MonoTouch Binding for AdMob library, you just need to add the AlexTouch.GoogleAdMobAds.dll to you project references and add the following using statement to your source file.
 
-bash /Developer/MonoTouch/usr/bin/btouch libGoogleAdMobAds.cs -s:enums.cs extensions.cs
+			using AlexTouch.GoogleAdMobAds;
 
-also don't forget to include the libGoogleAdMobAds.a to your project and
-set its build action to NOTHING
+Also it uses the c# events =) so Have Fun!!
+			
+			var ad = new GADBannerView(new RectangleF(new PointF(0,0), GADBannerView.GAD_SIZE_300x250))
+			{
+				AdUnitID = "Use Your AdMob Id here",
+				RootViewController = this //or your RootViewController	
+			};
+			
+			ad.DidReceiveAd += delegate 
+			{
+				this.View.AddSubview(ad);
+				Console.WriteLine("AD Received");
+			};
+			
+			ad.DidFailToReceiveAdWithError += delegate(object sender, GADBannerViewDidFailWithErrorEventArgs e) {
+				Console.WriteLine(e.Error);
+			};
+			
+			ad.WillPresentScreen += delegate {
+				Console.WriteLine("showing new screen");
+			};
+			
+			ad.WillLeaveApplication += delegate {
+				Console.WriteLine("I will leave application");
+			};
+			
+			ad.WillDismissScreen += delegate {
+				Console.WriteLine("Dismissing opened screen");
+			};
+			
+			Console.Write("Requesting Ad");
+			ad.LoadRequest(new GADRequest());
 
-and add this to your additional btouch arguments
 
--v -v -v -gcc_flags "-framework AudioToolbox -framework MessageUI -framework SystemConfiguration -L${ProjectDir} -lGoogleAdMobAds -force_load ${ProjectDir}/libGoogleAdMobAds.a"
+Also visit the official documentation of this API 
+==================================================
 
-
+http://code.google.com/mobile/ads/docs/ios/fundamentals.html
+http://code.google.com/mobile/ads/docs/ios/intermediate.html
+http://code.google.com/mobile/ads/docs/ios/advanced.html

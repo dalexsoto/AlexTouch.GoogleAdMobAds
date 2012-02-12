@@ -1,0 +1,4 @@
+/Users/Alex/Projects/AlexTouch.GoogleAdMobAds/AlexTouch.GoogleAdMobAds/bin/Debug/AlexTouch.GoogleAdMobAds.dll.mdb
+/Users/Alex/Projects/AlexTouch.GoogleAdMobAds/AlexTouch.GoogleAdMobAds/bin/Debug/AlexTouch.GoogleAdMobAds.dll
+/Users/Alex/Projects/AlexTouch.GoogleAdMobAds/AlexTouch.GoogleAdMobAds/obj/Debug/AlexTouch.GoogleAdMobAds.dll
+/Users/Alex/Projects/AlexTouch.GoogleAdMobAds/AlexTouch.GoogleAdMobAds/obj/Debug/AlexTouch.GoogleAdMobAds.dll.mdb
