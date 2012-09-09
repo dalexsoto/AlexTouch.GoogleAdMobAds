@@ -11,7 +11,7 @@ Once referenced in your MonoTouch project add the following using statement to y
 
 Also it uses the c# events =) so Have Fun!!
 			
-			var ad = new GADBannerView(new RectangleF(new PointF(0,0), GADBannerView.GAD_SIZE_300x250))
+			var ad = new GADBannerView(GADAdSizeCons.MediumRectangle,new PointF(0,0))
 			{
 				AdUnitID = "Use Your AdMob Id here",
 				RootViewController = this //or your RootViewController	
@@ -46,6 +46,6 @@ Also it uses the c# events =) so Have Fun!!
 Also visit the official documentation of this API 
 ==================================================
 
-http://code.google.com/mobile/ads/docs/ios/fundamentals.html
-http://code.google.com/mobile/ads/docs/ios/intermediate.html
-http://code.google.com/mobile/ads/docs/ios/advanced.html
+	http://code.google.com/mobile/ads/docs/ios/fundamentals.html
+	http://code.google.com/mobile/ads/docs/ios/intermediate.html
+	http://code.google.com/mobile/ads/docs/ios/advanced.html
