@@ -42,6 +42,7 @@ public struct GADAdSize
 	public uint flags;
 }
 
+[Preserve (AllMembers = true)]
 public partial class GADAdSizeCons
 {	
 	#region " SizeConstants "
