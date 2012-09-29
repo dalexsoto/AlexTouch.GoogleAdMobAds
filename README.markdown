@@ -1,7 +1,7 @@
 AlexTouch.GoogleAdMobAds
 ========================
 
-This is a MonoTouch Binding for Google's AdMob library `Version 6.1.5`
+This is a MonoTouch Binding for Google's AdMob library `Version 6.2.0`
 
 You just need to download the project, Open it with MonoDevelop, build project and add the resulting AlexTouch.GoogleAdMobAds.dll to your MonoTouch project (This DLL will be located in /AlexTouch.GoogleAdMobAds/bin/<DEBUG|RELEASE>/AlexTouch.GoogleAdMobAds.dll).
 

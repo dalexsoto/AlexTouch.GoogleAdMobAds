@@ -1,168 +1,174 @@
 using System;
 using System.Drawing;
+using MonoTouch.Foundation;
 using MonoTouch.ObjCRuntime;
 using System.Runtime.InteropServices;
-using MonoTouch.Foundation;
 
-//GADRequest file	
-public enum GADGender 
-{	
-	Unknown,
-	Male,
-	Female
-}
-
-//GADRequestError file
-public enum GADErrorCode 
-{	
-	InvalidRequest,
-	NoFill,
-	NetworkError,
-	ServerError,
-	OSVersionTooLow,
-	Timeout,
-	InterstitialAlreadyUsed,
-	MediationDataError,
-	MediationAdapterError,
-	MediationNoFill,
-	MediationInvalidAdSize
-}
-
-public enum GADSearchBorderType 
-{	
-	None,
-	Dashed,
-	Dotted,
-	Solid
-}
-
-public struct GADAdSize
+namespace AlexTouch.GoogleAdMobAds
 {
-	public SizeF size;
-	public uint flags;
-}
+	//GADRequest file	
+	public enum GADGender 
+	{	
+		Unknown,
+		Male,
+		Female
+	}
+	
+	//GADRequestError file
+	public enum GADErrorCode 
+	{	
+		InvalidRequest,
+		NoFill,
+		NetworkError,
+		ServerError,
+		OSVersionTooLow,
+		Timeout,
+		InterstitialAlreadyUsed,
+		MediationDataError,
+		MediationAdapterError,
+		MediationNoFill,
+		MediationInvalidAdSize
+	}
+	
+	public enum GADSearchBorderType 
+	{	
+		None,
+		Dashed,
+		Dotted,
+		Solid
+	}
+	
+	public struct GADAdSize
+	{
+		public SizeF size;
+		public uint flags;
+	}
 
-[Preserve (AllMembers = true)]
-public partial class GADAdSizeCons
-{	
-	#region " SizeConstants "
-	public static GADAdSize Banner 
-	{
-		get 
+	[Preserve (AllMembers = true)]
+	public partial class GADAdSizeCons
+	{	
+		#region " SizeConstants "
+		public static GADAdSize Banner 
 		{
-			IntPtr RTLD_MAIN_ONLY = Dlfcn.dlopen (null, 0);
-			IntPtr ptr = Dlfcn.dlsym (RTLD_MAIN_ONLY, "MTAdSizeBanner");
-			object obj = Marshal.PtrToStructure(ptr, typeof(GADAdSize));
-			
-			return (GADAdSize)obj;
+			get 
+			{
+				IntPtr RTLD_MAIN_ONLY = Dlfcn.dlopen (null, 0);
+				IntPtr ptr = Dlfcn.dlsym (RTLD_MAIN_ONLY, "MTAdSizeBanner");
+				object obj = Marshal.PtrToStructure(ptr, typeof(GADAdSize));
+				
+				return (GADAdSize)obj;
+			}
 		}
-	}
-	
-	public static GADAdSize MediumRectangle 
-	{
-		get 
+		
+		public static GADAdSize MediumRectangle 
 		{
-			IntPtr RTLD_MAIN_ONLY = Dlfcn.dlopen (null, 0);
-			IntPtr ptr = Dlfcn.dlsym (RTLD_MAIN_ONLY, "MTGADAdSizeMediumRectangle");
-			object obj = Marshal.PtrToStructure(ptr, typeof(GADAdSize));
-			
-			return (GADAdSize)obj;
+			get 
+			{
+				IntPtr RTLD_MAIN_ONLY = Dlfcn.dlopen (null, 0);
+				IntPtr ptr = Dlfcn.dlsym (RTLD_MAIN_ONLY, "MTGADAdSizeMediumRectangle");
+				object obj = Marshal.PtrToStructure(ptr, typeof(GADAdSize));
+				
+				return (GADAdSize)obj;
+			}
 		}
-	}
-	
-	public static GADAdSize FullBanner 
-	{
-		get 
+		
+		public static GADAdSize FullBanner 
 		{
-			IntPtr RTLD_MAIN_ONLY = Dlfcn.dlopen (null, 0);
-			IntPtr ptr = Dlfcn.dlsym (RTLD_MAIN_ONLY, "MTGADAdSizeFullBanner");
-			object obj = Marshal.PtrToStructure(ptr, typeof(GADAdSize));
-			
-			return (GADAdSize)obj;
+			get 
+			{
+				IntPtr RTLD_MAIN_ONLY = Dlfcn.dlopen (null, 0);
+				IntPtr ptr = Dlfcn.dlsym (RTLD_MAIN_ONLY, "MTGADAdSizeFullBanner");
+				object obj = Marshal.PtrToStructure(ptr, typeof(GADAdSize));
+				
+				return (GADAdSize)obj;
+			}
 		}
-	}
-	
-	public static GADAdSize Leaderboard 
-	{
-		get 
+		
+		public static GADAdSize Leaderboard 
 		{
-			IntPtr RTLD_MAIN_ONLY = Dlfcn.dlopen (null, 0);
-			IntPtr ptr = Dlfcn.dlsym (RTLD_MAIN_ONLY, "MTGADAdSizeLeaderboard");
-			object obj = Marshal.PtrToStructure(ptr, typeof(GADAdSize));
-			
-			return (GADAdSize)obj;
+			get 
+			{
+				IntPtr RTLD_MAIN_ONLY = Dlfcn.dlopen (null, 0);
+				IntPtr ptr = Dlfcn.dlsym (RTLD_MAIN_ONLY, "MTGADAdSizeLeaderboard");
+				object obj = Marshal.PtrToStructure(ptr, typeof(GADAdSize));
+				
+				return (GADAdSize)obj;
+			}
 		}
-	}
-	
-	public static GADAdSize Skyscraper 
-	{
-		get 
+		
+		public static GADAdSize Skyscraper 
 		{
-			IntPtr RTLD_MAIN_ONLY = Dlfcn.dlopen (null, 0);
-			IntPtr ptr = Dlfcn.dlsym (RTLD_MAIN_ONLY, "MTGADAdSizeSkyscraper");
-			object obj = Marshal.PtrToStructure(ptr, typeof(GADAdSize));
-			
-			return (GADAdSize)obj;
+			get 
+			{
+				IntPtr RTLD_MAIN_ONLY = Dlfcn.dlopen (null, 0);
+				IntPtr ptr = Dlfcn.dlsym (RTLD_MAIN_ONLY, "MTGADAdSizeSkyscraper");
+				object obj = Marshal.PtrToStructure(ptr, typeof(GADAdSize));
+				
+				return (GADAdSize)obj;
+			}
 		}
-	}
-	
-	public static GADAdSize SmartBannerPortrait 
-	{
-		get 
+		
+		public static GADAdSize SmartBannerPortrait 
 		{
-			IntPtr RTLD_MAIN_ONLY = Dlfcn.dlopen (null, 0);
-			IntPtr ptr = Dlfcn.dlsym (RTLD_MAIN_ONLY, "MTGADAdSizeSmartBannerPortrait");
-			object obj = Marshal.PtrToStructure(ptr, typeof(GADAdSize));
-			
-			return (GADAdSize)obj;
+			get 
+			{
+				IntPtr RTLD_MAIN_ONLY = Dlfcn.dlopen (null, 0);
+				IntPtr ptr = Dlfcn.dlsym (RTLD_MAIN_ONLY, "MTGADAdSizeSmartBannerPortrait");
+				object obj = Marshal.PtrToStructure(ptr, typeof(GADAdSize));
+				
+				return (GADAdSize)obj;
+			}
 		}
-	}
-	
-	public static GADAdSize SmartBannerLandscape 
-	{
-		get 
+		
+		public static GADAdSize SmartBannerLandscape 
 		{
-			IntPtr RTLD_MAIN_ONLY = Dlfcn.dlopen (null, 0);
-			IntPtr ptr = Dlfcn.dlsym (RTLD_MAIN_ONLY, "MTGADAdSizeSmartBannerLandscape");
-			object obj = Marshal.PtrToStructure(ptr, typeof(GADAdSize));
-			
-			return (GADAdSize)obj;
+			get 
+			{
+				IntPtr RTLD_MAIN_ONLY = Dlfcn.dlopen (null, 0);
+				IntPtr ptr = Dlfcn.dlsym (RTLD_MAIN_ONLY, "MTGADAdSizeSmartBannerLandscape");
+				object obj = Marshal.PtrToStructure(ptr, typeof(GADAdSize));
+				
+				return (GADAdSize)obj;
+			}
 		}
-	}
-	
-	public static GADAdSize Invalid 
-	{
-		get 
+		
+		public static GADAdSize Invalid 
 		{
-			IntPtr RTLD_MAIN_ONLY = Dlfcn.dlopen (null, 0);
-			IntPtr ptr = Dlfcn.dlsym (RTLD_MAIN_ONLY, "MTGADAdSizeInvalid");
-			object obj = Marshal.PtrToStructure(ptr, typeof(GADAdSize));
-			
-			return (GADAdSize)obj;
+			get 
+			{
+				IntPtr RTLD_MAIN_ONLY = Dlfcn.dlopen (null, 0);
+				IntPtr ptr = Dlfcn.dlsym (RTLD_MAIN_ONLY, "MTGADAdSizeInvalid");
+				object obj = Marshal.PtrToStructure(ptr, typeof(GADAdSize));
+				
+				return (GADAdSize)obj;
+			}
 		}
-	}
-	
+
+
+
 #endregion
-	
-	#region "Convenience Functions"
-	
-	// Deprecated Macros
-	[Obsolete("Use GADAdSizeCons.Banner Instead")]
-	public static readonly SizeF GAD_SIZE_320x50 = GADAdSizeCons.Banner.size;
-	
-	[Obsolete("Use GADAdSizeCons.MediumRectangle Instead")]
-	public static readonly SizeF GAD_SIZE_300x250 = GADAdSizeCons.MediumRectangle.size;
-	
-	[Obsolete("Use ADAdSizeCons.FullBanner Instead")]
-	public static readonly SizeF GAD_SIZE_468x60 = GADAdSizeCons.FullBanner.size;
-	
-	[Obsolete("Use GADAdSizeCons.Leaderboard Instead")]
-	public static readonly SizeF GAD_SIZE_728x90 = GADAdSizeCons.Leaderboard.size;
-	
-	[Obsolete("Use ADAdSizeCons.Skyscraper Instead")]
-	public static readonly SizeF GAD_SIZE_120x600 = GADAdSizeCons.Skyscraper.size;
+		
+		#region "Convenience Functions"
+		
+		// Deprecated Macros
+		[Obsolete("Use GADAdSizeCons.Banner Instead")]
+		public static readonly SizeF GAD_SIZE_320x50 = GADAdSizeCons.Banner.size;
+		
+		[Obsolete("Use GADAdSizeCons.MediumRectangle Instead")]
+		public static readonly SizeF GAD_SIZE_300x250 = GADAdSizeCons.MediumRectangle.size;
+		
+		[Obsolete("Use ADAdSizeCons.FullBanner Instead")]
+		public static readonly SizeF GAD_SIZE_468x60 = GADAdSizeCons.FullBanner.size;
+		
+		[Obsolete("Use GADAdSizeCons.Leaderboard Instead")]
+		public static readonly SizeF GAD_SIZE_728x90 = GADAdSizeCons.Leaderboard.size;
+		
+		[Obsolete("Use ADAdSizeCons.Skyscraper Instead")]
+		public static readonly SizeF GAD_SIZE_120x600 = GADAdSizeCons.Skyscraper.size;
+		
+#endregion
 
-	#endregion
+	}
 
 }
 

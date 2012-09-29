@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{36ADAE1F-188C-4F45-92C4-D2E77C7A308D}</ProjectGuid>
+    <ProjectGuid>{69A9EA74-E8C1-43EC-9F2F-C41A40286430}</ProjectGuid>
     <ProjectTypeGuids>{F5B4F3BC-B597-4E2B-B552-EF5D8A32436F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>AlexTouch.GoogleAdMobAds</RootNamespace>
@@ -43,12 +43,12 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="Extras.cs" />
+    <ObjcBindingNativeLibrary Include="libGoogleAdMobAds.a" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="libGoogleAdMobAds.linkwith.cs">
       <DependentUpon>libGoogleAdMobAds.a</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ObjcBindingNativeLibrary Include="libGoogleAdMobAds.a" />
+    <Compile Include="Extras.cs" />
   </ItemGroup>
 </Project>

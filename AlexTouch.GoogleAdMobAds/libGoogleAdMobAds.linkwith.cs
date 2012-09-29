@@ -1,7 +1,7 @@
 using System;
 using MonoTouch.ObjCRuntime;
 
-[assembly: LinkWith ("libGoogleAdMobAds.a", LinkTarget.Simulator | LinkTarget.ArmV6 | LinkTarget.ArmV7, ForceLoad = true, Frameworks = "AudioToolbox MessageUI SystemConfiguration CoreGraphics", IsCxx = true, 
+[assembly: LinkWith ("libGoogleAdMobAds.a", LinkTarget.Simulator | LinkTarget.ArmV7, ForceLoad = true, Frameworks = "AudioToolbox MessageUI SystemConfiguration CoreGraphics MediaPlayer", WeakFrameworks = "AdSupport", IsCxx = true, 
                      LinkerFlags = "-lz -lsqlite3 " +
                      "-Xlinker -alias -Xlinker _kGADAdSizeBanner -Xlinker _MTAdSizeBanner " +
                      "-Xlinker -alias -Xlinker _kGADAdSizeMediumRectangle -Xlinker _MTGADAdSizeMediumRectangle " +

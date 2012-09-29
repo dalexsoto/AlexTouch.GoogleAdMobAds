@@ -1,6 +1,6 @@
 using System;
-using MonoTouch.ObjCRuntime;
 using System.Runtime.InteropServices;
+using MonoTouch.ObjCRuntime;
 using MonoTouch.Foundation;
 
 namespace AlexTouch.GoogleAdMobAds
@@ -11,7 +11,7 @@ namespace AlexTouch.GoogleAdMobAds
 		
 		public static readonly string GADGoogleAdMobNetworkName = "GoogleAdMobAds";
 	}
-
+	
 	public partial class GADRequestError
 	{
 		private static string kGADErrorDomain;
@@ -37,6 +37,5 @@ namespace AlexTouch.GoogleAdMobAds
 			}
 		}
 	}
-
 }
 
