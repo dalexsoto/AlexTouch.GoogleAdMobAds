@@ -7,6 +7,47 @@ using MonoTouch.UIKit;
 
 namespace AlexTouch.GoogleAdMobAds
 {
+	#region CustomLib
+	// This is a custom class created by me and is not part of Google Admob lib
+	// But it is necesary for this binding to work
+	[BaseType (typeof (NSObject), Name="libAdmobExporter")]
+	interface GADAdSizeCons
+	{
+		[Static, Export ("kGADAdSizeBannerGlobal")]
+		GADAdSize Banner { get; }
+
+		[Static, Export ("kGADAdSizeFullBannerGlobal")]
+		GADAdSize FullBanner { get; }
+
+		[Static, Export ("kGADAdSizeInvalidGlobal")]
+		GADAdSize Invalid { get; }
+
+		[Static, Export ("kGADAdSizeLeaderboardGlobal")]
+		GADAdSize Leaderboard { get; }
+
+		[Static, Export ("kGADAdSizeMediumRectangleGlobal")]
+		GADAdSize MediumRectangle { get; }
+
+		[Static, Export ("kGADAdSizeSkyscraperGlobal")]
+		GADAdSize Skyscraper { get; }
+
+		[Static, Export ("kGADAdSizeSmartBannerLandscapeGlobal")]
+		GADAdSize SmartBannerLandscape { get; }
+
+		[Static, Export ("kGADAdSizeSmartBannerPortraitGlobal")]
+		GADAdSize SmartBannerPortrait { get; }
+
+		[Static, Export ("GADAdSizeFromCGSizeGlobal:")]
+		GADAdSize GADAdSizeFromSizeF (SizeF size);
+
+		[Static, Export ("GADAdSizeFullWidthPortraitWithHeightGlobal:")]
+		GADAdSize GADAdSizeFullWidthPortraitWithHeight (float height);
+
+		[Static, Export ("GADAdSizeFullWidthLandscapeWithHeightGlobal:")]
+		GADAdSize GADAdSizeFullWidthLandscapeWithHeight (float height);
+	}
+	#endregion
+
 	[BaseType (typeof (NSObject))]
 	interface GADAdMobExtras : GADAdNetworkExtras
 	{
