@@ -1,3 +1,9 @@
+WARNING!!
+=========
+
+This code is outdated it is just here for [Hysterical reasons](http://www.catb.org/jargon/html/H/hysterical-reasons.html), Please use [the one on monotouch-bindings repo](https://github.com/mono/monotouch-bindings/tree/master/GoogleAdMobAds) instead.
+
+
 AlexTouch.GoogleAdMobAds
 ========================
 
